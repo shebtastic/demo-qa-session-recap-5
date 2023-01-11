@@ -1,12 +1,12 @@
 import ArtPiecePreview from "./ArtPiecePreview";
 
-function isArtPieceFavorite(slug) {
-  return artPiecesInfo.some(
-    (artPiece) => artPiece.slug === slug && artPiece.isFavorite
-  );
-}
-
 function ArtPieces({ pieces, artPiecesInfo, toggleFavorite }) {
+  function isArtPieceFavorite(slug) {
+    return artPiecesInfo.some(
+      (artPiece) => artPiece.slug === slug && artPiece.isFavorite
+    );
+  }
+
   return (
     <ul>
       {pieces.map((art) => (
