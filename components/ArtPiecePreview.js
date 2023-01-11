@@ -10,7 +10,7 @@ function ArtPiecePreview({
   onToggleFavorite,
 }) {
   return (
-    <div>
+    <div data-testid={`art-piece-preview-${artist}-${title}`}>
       <h2>{title}</h2>
       <h3>{artist}</h3>
       <FavoriteButton
